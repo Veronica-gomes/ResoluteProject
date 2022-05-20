@@ -1,6 +1,6 @@
 /* RESET CSS */
 @import url("http://fonts.cdnfonts.com/css/abraham");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
   overflow-x: hidden;
@@ -18,7 +18,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  box-shadow: border-box;
+  box-sizing: border-box;
   border: none;
   outline: none;
 }
@@ -41,13 +41,13 @@ body {
   --amarelo-secundario: #FFF0CC;
   --texto-primario: #E6E6E6;
   --placeholder-color: #808080;
-  --bg-primario: #171219;
+  --bg-primario: #151219;
   --bg-secundario: #1D1B26;
   --lilas-placeholder: #917DB2;
   --bg-red: #261313; 
   --grey: #B2B2B2;
   --font-principal: "Abraham", sans-serif;
-  --font-secundaria: "Montserrat", sans-serif;
+  --font-secundaria: "Inter", sans-serif;
 }
 
 
@@ -59,6 +59,8 @@ body {
   width: 100%;
   height: 90px;
   position: absolute;
+  z-index: 99;
+  background-color: var(--bg-primario);
 }
 
 .header-items {
@@ -93,7 +95,7 @@ body {
     color: var(--grey);
     font-weight: 600;
     font-size: 1rem;
-    padding: 0 .6rem 0 .6rem;
+    padding: 0 1rem 0 1rem;
     font-family: var(--font-secundaria); 
     position: relative;
     transition: all ease .4s;
@@ -124,7 +126,13 @@ body {
 
 .lista li a.active {
   color: var(--cor-primaria);
-
+  background-color: rgba(255, 128, 128, .17);
+  padding: .4rem .6rem;
+  border-left: 4px solid var(--cor-primaria);
+  font-weight: 400;
+  box-shadow: 0px 0px 10px rgba(255, 128, 128, 0.2); 
+  z-index: -1;
+  
 }
 
 .acesso {
@@ -147,7 +155,7 @@ body {
   margin-left: 20px;
   width: 100%;
   cursor: pointer;
-  box-shadow: 0px 0px 20px rgba(255, 128, 128, 0.3);
+  box-shadow: 0px 0px 15px rgba(255, 128, 128, 0.3);
   transition: all ease .4s;
   z-index: 1;
 }
@@ -182,6 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-image: url(../img/Linhas.png);
@@ -263,15 +272,6 @@ body {
   transform: scale(1.1);
 }
 
-.intro_negocio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60vh;
-  border: 2px solid yellow;
-}
-
 .scroll-indicador {
   display: flex;
   flex-direction: row;
@@ -305,6 +305,133 @@ body {
     opacity: 1;
   }
 }
+
+
+/*--- Introdução negocio --*/
+
+.intro_negocio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1400px;
+  height: 60vh;
+  background-color: var(--bg-primario);
+  
+}
+
+.principios, .valores, .missoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  width: 400px;
+  height: 450px;
+  cursor: pointer;
+
+  /*background-color: var(--bg-primario);*/
+}
+
+.intro_items {
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  margin-left: 30px;
+}
+
+.circulo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--lilas-secundario);
+  font-family: var(--font-secundaria);
+  font-size: .8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 25px rgba(145, 125, 178, 1);
+  box-shadow: 1px 1px 25px rgba(145, 125, 178, 1);
+  width: 35px;
+  height: 35px;
+  background-color: #1D1B26;
+  border-radius: 50%;
+  border: 2px solid var(--lilas-placeholder);
+}
+
+.circulo2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background-color: #534866;
+  border-radius: 50%;
+}
+
+.circulo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  background-color: #292433;
+  border-radius: 50%;
+}
+
+.principios h3, .valores h3, .missoes h3 {
+  margin: 1rem 0;
+  font-family: var(--font-principal);
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: .4em;
+  color: var(--placeholder-color);
+  transition: .3s ;
+}
+
+.principios p, .valores p, .missoes p {
+  font-family: var(--font-secundaria);
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: justify;
+  margin: .5rem 0;
+}
+
+.linha-vert {
+  width: 7px;
+  border-radius: 3px;
+  height: 50%;
+  background-color: rgba(145, 125, 178, .5);
+  box-shadow: 1px 1px 15px rgba(145, 125, 178, 1);
+  transition: .3s ;
+}
+
+.titutloActive {
+  background: linear-gradient(91.47deg, #F080FF 0%, #D0B3FF 99.64%, #CFB3FF 99.65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; 
+}
+
+
+.textColor {
+  color: var(--placeholder-color);
+  transition: .3s ;
+}
+.textoActive {
+  color: var(--texto-primario);
+}
+
+
+.borderActive {
+  background-color: rgba(145, 125, 178, 1);
+}
+
+
+
+
+
+
+
+
+
 
 
 
