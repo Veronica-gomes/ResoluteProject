@@ -52,7 +52,7 @@ body {
 
 
 /*--- Formatações Header ---*/
-.cont-header{
+.cont_header{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ body {
   background-color: var(--bg-primario);
 }
 
-.header-items {
+.header_items {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +71,7 @@ body {
   height: inherit;
 }
 
-.header-items span {
+.header_items span {
   color: var(--texto-primario);
   font-size: 2rem;
   font-family: var(--font-principal);
@@ -311,7 +311,7 @@ body {
 
 .intro_negocio {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 1400px;
   height: 60vh;
@@ -324,11 +324,15 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 20px;
-  width: 400px;
+  width: 450px;
   height: 450px;
   cursor: pointer;
 
   /*background-color: var(--bg-primario);*/
+}
+
+.missoes {
+  width: 420px;
 }
 
 .intro_items {
@@ -398,7 +402,7 @@ body {
   border-radius: 3px;
   height: 50%;
   background-color: rgba(145, 125, 178, .5);
-  box-shadow: 1px 1px 15px rgba(145, 125, 178, 1);
+  box-shadow: 1px 1px 15px rgba(145, 125, 178, .6);
   transition: .3s ;
 }
 
@@ -422,6 +426,72 @@ body {
 
 .borderActive {
   background-color: rgba(145, 125, 178, 1);
+}
+
+
+/*--- Inicio progress bar ---*/
+.cont_progressBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-color: var(--bg-secundario);
+}
+
+.progress_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  height: inherit;
+}
+
+.progress1, .progress2, .progress3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  width: 30%;
+  margin: 0 20px;
+}
+
+.progress1 h3, .progress2 h3, .progress3 h3{
+  font-family: var(--font-principal);
+  font-size: 2.2rem;
+  color: var(--lilas-placeholder);
+  margin-bottom: 15px;
+}
+
+.circuloExterno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--lilas-secundario);
+}
+
+.circuloIterno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #151219;
+  border: 5px solid var(--lilas-secundario);
+  box-shadow: 1px 1px 15px rgba(145, 125, 178, .7);
+}
+
+.circuloIterno span {
+  font-size: 2rem;
+  font-family: var(--font-secundaria);
+  font-weight: 500;
+  color: var(--lilas-secundario);
 }
 
 

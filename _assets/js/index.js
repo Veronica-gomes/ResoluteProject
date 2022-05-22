@@ -15,6 +15,12 @@ const divPrincipios = document.querySelector('.principios');
 const divValores = document.querySelector('.valores');
 const divMissoes = document.querySelector('.missoes');
 
+/*
+divPrincipios.addEventListener("click", handleText('principios'));
+divValores.addEventListener("click", handleText('valores'));
+divMissoes.addEventListener("click", handleText('missoes')); 
+*/
+
 
 divPrincipios.addEventListener("click", () =>{
     let principiosTitulo = document.querySelector('.principios h3');
@@ -23,9 +29,9 @@ divPrincipios.addEventListener("click", () =>{
 
     principiosTitulo.classList.toggle('titutloActive');
     principiosBorder.classList.toggle('borderActive');
-    for(let i = 0; i<= principiosText.length; i++){
+    for(let i = 0; i < principiosText.length; i++){
         principiosText[i].classList.toggle('textoActive');
-    }
+    } 
 });
 
 divValores.addEventListener("click", () =>{
@@ -35,7 +41,7 @@ divValores.addEventListener("click", () =>{
 
     valoresTitulo.classList.toggle('titutloActive');
     valoresBorder.classList.toggle('borderActive');
-    for(let i = 0; i <= valoresText.length; i++){
+    for(let i = 0; i < valoresText.length; i++){
         valoresText[i].classList.toggle('textoActive');
     }
 });
@@ -47,11 +53,32 @@ divMissoes.addEventListener("click", () =>{
 
     missoesTitulo.classList.toggle('titutloActive');
     missoesBorder.classList.toggle('borderActive');
-    for(let i = 0; i <= missoesText.length; i++){
+    for(let i = 0; i < missoesText.length; i++){
         missoesText[i].classList.toggle('textoActive');
     }
 
 })
 
+
+/*handleText('principios')
+
+
+
+function handleText(introDiv){
+    let titulo = document.querySelector(`.${introDiv} h3`);
+    let texto = document.querySelectorAll(`.${introDiv} p`);
+    let border = document.querySelector(`.${introDiv} .linha-vert`);
+
+    console.log(titulo, texto, border);
+   
+    
+    titulo.classList.toggle('titutoActive');
+    border.classList.toggle('borderActive');
+    
+    for(let i = 0; i < texto.length; i++){
+        texto[i].classList.toggle('textoActive');
+    } 
+     
+}  */
 
 
