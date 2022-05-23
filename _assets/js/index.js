@@ -62,8 +62,6 @@ divMissoes.addEventListener("click", () =>{
 
 /*handleText('principios')
 
-
-
 function handleText(introDiv){
     let titulo = document.querySelector(`.${introDiv} h3`);
     let texto = document.querySelectorAll(`.${introDiv} p`);
@@ -80,5 +78,136 @@ function handleText(introDiv){
     } 
      
 }  */
+
+
+/* --- Efeito frase intro --- */
+
+
+
+
+/* --- Animação intro --- */
+const informacoesIntro = document.querySelectorAll('[data-anime]');
+
+window.addEventListener('scroll', () =>{
+
+    const alturaPage = window.pageYOffset + ((window.innerHeight * 3) / 4);
+
+    informacoesIntro.forEach((element) =>{
+        if(alturaPage > element.offsetTop){
+            element.classList.add('animacao')
+        }
+    })
+})
+
+
+/* --- menu mobile --- */ 
+const menuBtn = document.querySelector('.btn_mobile');
+
+function handleMenu(){
+    const listaMenu = document.querySelector('.lista');
+    listaMenu.classList.toggle('menuActive');
+    menuBtn.classList.toggle('btn_mobileActive'); 
+}
+
+menuBtn.addEventListener("click", handleMenu);
+window.addEventListener("scroll", () =>{
+    const listaMenu = document.querySelector('.lista');
+    listaMenu.classList.remove('menuActive');
+    menuBtn.classList.remove('btn_mobileActive'); 
+})  
+
+
+/* --- Modelo de negocio mobile --- */ 
+
+const principiosMobile = document.querySelector('.principiosMobile');
+const valoresMobile = document.querySelector('.valoresMobile');
+const missoesMobile = document.querySelector('.missoesMobile');
+const circulos3 = document.querySelectorAll('[data-circ3]');
+const circulos2 = document.querySelectorAll('[data-circ2]');
+
+let principiosTexto = document.querySelector('.texto_principios');
+let valoresTexto = document.querySelector('.texto_valores');
+let missoesTexto = document.querySelector('.texto_missoes');
+
+principiosMobile.addEventListener("click", () =>{
+    principiosTexto.classList.toggle('handleText');
+    valoresTexto.classList.remove('handleText');
+    missoesTexto.classList.remove('handleText');
+    
+    for(let i = 0; i < circulos3.length; i++){
+        if(i === 0) {
+            circulos3[i].classList.toggle('modeloAtivo');
+        }else {
+            circulos3[i].classList.remove('modeloAtivo');
+        }  
+    }
+
+    for(let i = 0; i < circulos2.length; i++){
+        if(i === 0){
+            circulos2[i].classList.toggle('modeloAtivo');
+        }else {
+            circulos2[i].classList.remove('modeloAtivo');
+        }
+    }
+    
+    
+});
+
+valoresMobile.addEventListener("click", () =>{
+    valoresTexto.classList.toggle('handleText');
+    principiosTexto.classList.remove('handleText');
+    missoesTexto.classList.remove('handleText');
+
+    for(let i = 0; i < circulos3.length; i++){
+        if(i === 1){
+            circulos3[i].classList.toggle('modeloAtivo');
+        }else {
+            circulos3[i].classList.remove('modeloAtivo');
+        }
+    }
+
+    for(let i = 0; i < circulos2.length; i++){
+        if(i === 1){
+            circulos2[i].classList.toggle('modeloAtivo');
+        }else {
+            circulos2[i].classList.remove('modeloAtivo');
+        }
+    }
+
+    
+});
+
+missoesMobile.addEventListener("click", () =>{
+    missoesTexto.classList.toggle('handleText');
+    valoresTexto.classList.remove('handleText');
+    principiosTexto.classList.remove('handleText');
+
+    for(let i = 0; i < circulos3.length; i++){
+        if(i === 2){
+            circulos3[i].classList.toggle('modeloAtivo')
+        }else {
+            circulos3[i].classList.remove('modeloAtivo');
+        } 
+    }
+
+    for(let i = 0; i < circulos2.length; i++){
+        if(i === 2){
+            circulos2[i].classList.toggle('modeloAtivo');
+        }else {
+            circulos2[i].classList.remove('modeloAtivo');
+        }
+    }
+});
+
+window.addEventListener("load", () =>{
+    principiosTexto.classList.toggle('handleText');
+    circulos3[0].classList.toggle('modeloAtivo');
+    circulos2[0].classList.toggle('modeloAtivo');
+})
+
+
+
+
+
 
 

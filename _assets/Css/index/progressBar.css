@@ -1,0 +1,67 @@
+@import './global.css';
+
+/*--- Inicio progress bar ---*/
+.cont_progressBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg-secundario);
+  }
+  
+  .progress_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    max-width: 1400px;
+    height: inherit;
+  }
+  
+  .progress1, .progress2, .progress3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 30%;
+    margin: 0 20px;
+  }
+  
+  .progress1 h3, .progress2 h3, .progress3 h3{
+    font-family: var(--font-principal);
+    font-size: 2.2rem;
+    color: var(--lilas-placeholder);
+    margin-bottom: 15px;
+  }
+  
+  .circuloExterno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--lilas-secundario);
+  }
+  
+  .circuloIterno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #151219;
+    border: 5px solid var(--lilas-secundario);
+    box-shadow: 1px 1px 15px rgba(145, 125, 178, .7);
+  }
+  
+  .circuloIterno span {
+    font-size: 2rem;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    color: var(--lilas-secundario);
+  }

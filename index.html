@@ -13,7 +13,10 @@
    <script src="https://kit.fontawesome.com/2bf2ec62ee.js" crossorigin="anonymous"></script>
 
    <!-- Styles -->
-   <link rel="stylesheet" href="_assets/Css/index.css">
+   <link rel="stylesheet" href="_assets/Css/index/header.css">
+   <link rel="stylesheet" href="_assets/Css/index/intro.css">
+   <link rel="stylesheet" href="_assets/Css/index/progressBar.css">
+   <link rel="stylesheet" href="_assets/Css/index/responsividade.css">
    
 
    <title>Resolute - Ideias de outro mundo</title>
@@ -28,7 +31,7 @@
                 <span>Resolute</span>
             </div>
 
-            <navbar>
+            <navbar class="cont_navbar">
                 <ul class="lista">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="freelancer.html">Buscar profissinal</a></li>
@@ -48,6 +51,10 @@
                     <button class="btn-entrar">Entrar</button>
                 </a>
             </div>
+
+            
+            <button class="btn_mobile"></button>
+            
 
         </div>
 
@@ -79,76 +86,136 @@
 
         <div class="intro_negocio">
 
-                <div class="principios">
+                <div class="principios" data-anime="principios">
                     <div class="linha-vert"></div> 
 
                     <div class="intro_items" >
-                        <!--Circle animation -->
-                        <div class="circulo3">
-                            <div class="circulo2">
-                                <div class="circulo1">
-                                <span>01</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--//Circle animation -->
+                         <!--Circle animation -->
+                         <div class="circulo3"></div>
+                             <div class="circulo2"></div>
+                                 <div class="circulo1">
+                                     <span>01</span>
+                                 </div>
+                         <!--//Circle animation -->
 
-                        <h3>Principios</h3>
-                        <p class="textColor">Nossa meta é suprir a demanda crescente de profissionais de TI nos próximos anos.</p>
-                        <p class="textColor">Permitindo que as stratups, empresas de tecnologia  e impacto consigam atingir seus objetivos e gerar soluções capazes mudar o mundo</p>
-                        <p class="textColor">Acessibilizar profissionais para os pequenos negócios.</p>
+                            <h3>Principios</h3>
+                            <p class="textColor">Nossa meta é suprir a demanda crescente de profissionais de TI nos próximos anos.</p>
+                            <p class="textColor">Permitindo que as stratups, empresas de tecnologia  e impacto consigam atingir seus objetivos e gerar soluções capazes mudar o mundo</p>
+                            <p class="textColor">Acessibilizar profissionais para os pequenos negócios.</p>
+                        
                     </div>
 
                 </div>
 
 
-                <div class="valores">
+                <div class="valores" data-anime="valores">
                     <div class="linha-vert"></div>
 
                      <div class="intro_items">
                          <!--Circle animation -->
-                        <div class="circulo3">
-                            <div class="circulo2">
+                        <div class="circulo3"></div>
+                            <div class="circulo2"></div>
                                 <div class="circulo1">
-                                <span>02</span>
+                                    <span>02</span>
                                 </div>
-                            </div>
-                        </div>
                         <!--//Circle animation -->
 
-                        <h3>Valores</h3>
-                        <p class="textColor">
+
+                            <h3>Valores</h3>
+                            <p class="textColor">
                             Intermediar os profissionais com deficiência para o mercado de trabalho, promover a acessibilidade nas empresas, responsabilidade e propor uma cultura de diversidade, inovação e resiliência. 
-                        </p>
+                            </p>
+                        
                      </div>
 
                 </div>
 
 
-                <div class="missoes">
+                <div class="missoes" data-anime="missoes">
                     <div class="linha-vert"></div>
 
                     <div class="intro_items">
                          <!--Circle animation -->
-                        <div class="circulo3">
-                            <div class="circulo2">
+                         <div class="circulo3"></div>
+                            <div class="circulo2"></div>
                                 <div class="circulo1">
-                                <span>03</span>
+                                  <span>03</span>
                                 </div>
-                            </div>
-                        </div>
-                        <!--//Circle animation -->
+                          <!--//Circle animation -->
 
-                        <h3>Missoes</h3>
-                        <p class="textColor">
+                        
+                            <h3>Missoes</h3>
+                            <p class="textColor">
                             Somos um marketplace de prestadores de serviço da área de tecnologia. Garantimos o encontro de Statups, Empresas de impacto e pequenos negócios, com engenheiros de software, profissionais de comunicação e infraestrutura.
-                        </p>
+                            </p>
                     </div>
                    
                     
                 </div>
 
         </div>
+
+        <!--Items versão mobile-->
+        <div class="intro_negocio_mobile">
+            <div class="intro_circulos">
+
+                <div class="principiosMobile">
+                     <!--Circle animation -->
+                     <div class="circulo3" data-circ3=""></div>
+                        <div class="circulo2" data-circ2=""></div>
+                             <div class="circulo1">
+                                 <span>01</span>
+                            </div>
+                    <!--//Circle animation -->
+                </div>
+
+                <div class="valoresMobile">
+                    <!--Circle animation -->
+                    <div class="circulo3" data-circ3=""></div>
+                      <div class="circulo2" data-circ2=""></div>
+                         <div class="circulo1">
+                             <span>02</span>
+                        </div>
+                     <!--//Circle animation -->
+                </div>
+
+                <div class="missoesMobile">
+                    <!--Circle animation -->
+                    <div class="circulo3" data-circ3=""></div>
+                        <div class="circulo2" data-circ2=""></div>
+                             <div class="circulo1">
+                                 <span>03</span>
+                         </div>
+                    <!--//Circle animation -->
+                </div>
+            </div>
+
+            <div class="intro_textos">
+                <div class="texto_principios">
+                    <h3>Principios</h3>
+                        <p class="textColor">Nossa meta é suprir a demanda crescente de profissionais de TI nos próximos anos.</p>
+                        <p class="textColor">Permitindo que as stratups, empresas de tecnologia  e impacto consigam atingir seus objetivos e gerar soluções capazes mudar o mundo</p>
+                        <p class="textColor">Acessibilizar profissionais para os pequenos negócios.</p>
+                </div>
+
+                <div class="texto_valores">
+                    <h3>Valores</h3>
+                    <p class="textColor">
+                    Intermediar os profissionais com deficiência para o mercado de trabalho, promover a acessibilidade nas empresas, responsabilidade e propor uma cultura de diversidade, inovação e resiliência. 
+                    </p>
+                </div>
+
+                <div class="texto_missoes">
+                    <h3>Missoes</h3>
+                    <p class="textColor">
+                    Somos um marketplace de prestadores de serviço da área de tecnologia. Garantimos o encontro de Statups, Empresas de impacto e pequenos negócios, com engenheiros de software, profissionais de comunicação e infraestrutura.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--final Items versão mobile-->
+
+        
     </section>
     <!--Final introdução-->
 
@@ -165,6 +232,8 @@
                 </div>
                 
             </div>
+
+
 
             <div class="progress2">
                 <h3>Empresas cadastradas</h3>
@@ -190,12 +259,7 @@
     </section>
     <!--Final barra de progressão-->
 
-
-
-
-
-
-
+    
 
 
 
