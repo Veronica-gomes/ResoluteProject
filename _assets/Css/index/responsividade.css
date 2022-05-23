@@ -16,7 +16,6 @@
         display: none;
     }
 
-    
     .btn_mobile {
         display: block;
         background-image: url(../../img/Group\ 22.png);
@@ -70,11 +69,9 @@
         right: 0;
     }
 
-    
     .logo img {
         width: 40px;
     }
-
 
     .btn-entrar {
         font-size: 10px;
@@ -83,6 +80,10 @@
 
     .btn-criar {
         font-size: 10px;
+    }
+
+    .menu_mobile {
+        display: flex;
     }
 
 

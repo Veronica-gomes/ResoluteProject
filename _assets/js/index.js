@@ -100,7 +100,7 @@ window.addEventListener('scroll', () =>{
 })
 
 
-/* --- menu mobile --- */ 
+/* --- menu mobile hamburguer--- */ 
 const menuBtn = document.querySelector('.btn_mobile');
 
 function handleMenu(){
@@ -115,6 +115,17 @@ window.addEventListener("scroll", () =>{
     listaMenu.classList.remove('menuActive');
     menuBtn.classList.remove('btn_mobileActive'); 
 })  
+
+/* --- Menu mobile inferior --- */ 
+
+
+
+
+
+
+
+
+
 
 
 /* --- Modelo de negocio mobile --- */ 
@@ -173,8 +184,6 @@ valoresMobile.addEventListener("click", () =>{
             circulos2[i].classList.remove('modeloAtivo');
         }
     }
-
-    
 });
 
 missoesMobile.addEventListener("click", () =>{
@@ -204,6 +213,7 @@ window.addEventListener("load", () =>{
     circulos3[0].classList.toggle('modeloAtivo');
     circulos2[0].classList.toggle('modeloAtivo');
 })
+
 
 
 
